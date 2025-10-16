@@ -10,6 +10,7 @@
 # DONE: Implement exceptions
 # DONE: Support editing of m3u files (check multiline comment)
 # DONE: Create m3u if not exists
+# TODO: Delete YTMPS class and organize all in a script
 # TODO: Tidy help prompt
 # TODO: Save tracks in database to save time and for better performance
 # TODO: Display info for single tracks in db

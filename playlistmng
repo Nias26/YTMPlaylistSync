@@ -188,7 +188,7 @@ def get_to_delete() -> list[list[MusicFile]]:
         for local_track in local_tracks[i]:
             if local_track.metadata["videoid"][0] not in online_tracks_id:
                 # if no metadata found, then search videoid inside filename (fallback)
-                regex = re.compile(local_track.metadata["videoid"])
+                regex = re.compile(local_track.metadata["videoid"][0])
                 for track in local_tracks[i]:
                     if regex.search(track.filename):
                         files_to_delete[i].append(track)

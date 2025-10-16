@@ -1,0 +1,21 @@
+#!/usr/bin/python
+
+from ytmps import YTMPS
+import argparse
+from xdg.BaseDirectory import xdg_config_home
+from pathlib import Path
+
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(
+        description="Sync local storage wiht YTMusic playlist"
+    )
+
+    # Add arguments
+    parser.add_argument("option", type=str, help="Command")
+
+    # Parse the arguments
+    args = parser.parse_args()
+    ytmps = YTMPS(Path(xdg_config_home) / "ytmps" / "config.yaml")
+
+    ytmps.sync(args)

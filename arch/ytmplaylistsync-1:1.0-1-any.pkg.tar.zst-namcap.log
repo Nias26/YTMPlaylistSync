@@ -1,1 +1,0 @@
-ytmplaylistsync W: Dependency python detected and implicitly satisfied (python modules ['argparse', 'typing.Any', 'os', 're', 'pathlib.Path'] needed in files ['usr/bin/playlistmng'], programs ['python'] needed in scripts ['usr/bin/playlistmng'])

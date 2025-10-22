@@ -272,8 +272,6 @@ def edit_m3u_file(music_files: list[list[MusicFile]]) -> None:
 def sync(args):
     if args.option == "sync":
         tracks_to_update = get_to_update()
-        print("Tracks to download (for playlist): ", end="")
-        print([len(tracks_to_update_s) for tracks_to_update_s in tracks_to_update])
         failed: list[list[Track]] = download_tracks(tracks_to_update)
         edit_metadatas(tracks_to_update)
 
@@ -284,8 +282,6 @@ def sync(args):
                 edit_metadatas(failed)
 
         tracks_to_delete = get_to_delete()
-        print("Tracks to delete (for playlist): ", end="")
-        print([len(tracks_to_delete_s) for tracks_to_delete_s in tracks_to_delete])
         delete_tracks(tracks_to_delete)
 
         edit_m3u_file(read_local_tracks())
